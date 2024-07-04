@@ -1,3 +1,5 @@
+import java.util.regex.Pattern.compile
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -91,5 +93,4 @@ dependencies {
     //implementation ("io.github.cymchad:BaseRecyclerViewAdapterHelper4:4.1.4")
     implementation ("com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4")
     implementation ("org.greenrobot:eventbus:3.2.0")
-
 }
