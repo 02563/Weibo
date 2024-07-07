@@ -84,18 +84,18 @@ private var _binding: FragmentNotificationsBinding? = null
           val avatar = bundle.getString("avatar")
           val loginStatus = bundle.getBoolean("loginStatus")
 
-          // 在页面上展示用户信息
-          // TODO: 在这里添加展示用户信息的逻辑
-          val imageview: ImageView = _binding!!.imageAvatar
-          Glide.with(requireContext())
-              .load(avatar) // Replace "avatar" with the actual URL or resource of the image
-              .placeholder(R.drawable.default_avatar) // Replace "placeholder" with the resource ID of a placeholder image
-              .error(R.drawable.ic_delete) // Replace "error" with the resource ID of an error image
-              .into(imageview)
-          val textview: TextView = _binding!!.textName
-          textview.text = username
-          val textviewfan: TextView = _binding!!.textFans
-          textviewfan.text="粉丝："
+//          // 在页面上展示用户信息
+//          // TODO: 在这里添加展示用户信息的逻辑
+//          val imageview: ImageView = _binding!!.imageAvatar
+//          Glide.with(requireContext())
+//              .load(avatar) // Replace "avatar" with the actual URL or resource of the image
+//              .placeholder(R.drawable.ic_like) // Replace "placeholder" with the resource ID of a placeholder image
+////              .error(R.drawable.ic_delete) // Replace "error" with the resource ID of an error image
+//              .into(imageview)
+//          val textview: TextView = _binding!!.textName
+//          textview.text = username
+//          val textviewfan: TextView = _binding!!.textFans
+//          textviewfan.text="粉丝："
 
       }
 
@@ -164,8 +164,8 @@ private var _binding: FragmentNotificationsBinding? = null
                             (activity as MainActivity).runOnUiThread {
                                 Glide.with(requireContext())
                                     .load(avatar) // Replace "avatar" with the actual URL or resource of the image
-                                    .placeholder(R.drawable.default_avatar) // Replace "placeholder" with the resource ID of a placeholder image
-                                    .error(R.drawable.ic_delete) // Replace "error" with the resource ID of an error image
+                                    .placeholder(R.drawable.logo) // Replace "placeholder" with the resource ID of a placeholder image
+//                                    .error(R.drawable.ic_delete) // Replace "error" with the resource ID of an error image
                                     .into(imageview)
                                 textview.setText(username)
                                 val textviewfan: TextView = _binding!!.textFans

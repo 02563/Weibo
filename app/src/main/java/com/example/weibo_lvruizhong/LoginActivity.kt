@@ -285,6 +285,7 @@ class LoginActivity : AppCompatActivity() {
 
         val intent = Intent(this, MainActivity::class.java)
         val bundlegive = bundle
+        intent.putExtra("fragment", "notifications") // 设置默认展示的Fragment为NotificationsFragment
         intent.putExtras(bundle)
         startActivity(intent)
     }

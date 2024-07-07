@@ -35,6 +35,14 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
+        val fragmentName = intent.getStringExtra("fragment")
+        if (fragmentName == "notifications") {
+            val fragment = NotificationsFragment()
+            fragment.arguments = intent.extras
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.nav_host_fragment_activity_main, fragment)
+                .commit()
+        }
 
         val bundle = intent.extras
         if (bundle != null) {
